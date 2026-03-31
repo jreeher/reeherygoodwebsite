@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
@@ -8,16 +8,23 @@
 }
 
 :root {
-  --coral: #FF6B6B;
-  --yellow: #FFD93D;
-  --green: #6BCB77;
-  --blue: #4CC9F0;
-  --purple: #C77DFF;
-  --navy: #14213D;
-  --dark-navy: #0D1B2A;
-  --cream: #FFF8F0;
-  --pink: #FF85A1;
-  --orange: #FF9F43;
+  --coral:      #FF6B6B;
+  --yellow:     #FFD93D;
+  --green:      #6BCB77;
+  --blue:       #4CC9F0;
+  --purple:     #C77DFF;
+  --pink:       #FF85A1;
+  --orange:     #FF9F43;
+
+  /* Botanical palette */
+  --navy:       #1B4332;   /* deep forest (replaces dark navy) */
+  --dark-navy:  #0D1F14;   /* very dark forest */
+  --cream:      #F5F0E6;   /* warm linen */
+  --sage:       #52796F;
+  --leaf:       #74C69D;
+  --terracotta: #C87B5C;
+  --gold:       #C8A96E;
+  --mist:       #DCE8D4;
 }
 
 html { scroll-behavior: smooth; }
@@ -40,14 +47,14 @@ nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 4px solid var(--coral);
+  border-bottom: 4px solid var(--terracotta);
 }
 
 .nav-logo {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.9rem;
-  color: var(--yellow);
+  color: var(--gold);
   text-decoration: none;
   display: inline-block;
   transition: transform 0.25s;
@@ -76,7 +83,7 @@ nav {
 .nav-links a {
   color: rgba(255,255,255,0.85);
   text-decoration: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -86,7 +93,7 @@ nav {
 }
 .nav-links a:hover,
 .nav-links a.active {
-  background: var(--coral);
+  background: var(--terracotta);
   color: white;
   transform: translateY(-2px);
 }
@@ -134,7 +141,7 @@ nav {
   height: 520px;
   top: -220px;
   left: -160px;
-  background: radial-gradient(circle, rgba(199,125,255,0.13) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(82,121,111,0.22) 0%, transparent 65%);
 }
 
 .site-hero::after {
@@ -142,7 +149,7 @@ nav {
   height: 420px;
   bottom: -190px;
   right: -130px;
-  background: radial-gradient(circle, rgba(76,201,240,0.11) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(116,198,157,0.15) 0%, transparent 65%);
 }
 
 .site-hero-inner {
@@ -151,7 +158,7 @@ nav {
 }
 
 .site-hero-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   line-height: 1.05;
   margin: 0;
@@ -160,26 +167,82 @@ nav {
 .site-hero-title .hero-line-1 {
   display: block;
   font-size: clamp(3.5rem, 11vw, 8rem);
-  color: var(--yellow);
+  color: var(--gold);
   letter-spacing: -1px;
-  text-shadow: 0 0 60px rgba(255,217,61,0.22);
+  text-shadow: 0 0 60px rgba(200,169,110,0.3);
 }
 
 .site-hero-title .hero-line-2 {
   display: block;
   font-size: clamp(1.8rem, 5.5vw, 4rem);
   color: rgba(255,255,255,0.88);
-  letter-spacing: 6px;
-  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
   margin-top: 0.15em;
 }
 
 .site-hero-rule {
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, var(--coral), var(--yellow), var(--green), var(--blue), var(--purple));
+  background: linear-gradient(90deg, var(--terracotta), var(--gold), var(--leaf), var(--sage));
   border-radius: 4px;
   margin: 1.8rem auto 0;
+}
+
+/* ===== BOTANICAL HERO DECORATION ===== */
+.botanical-leaves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.b-leaf {
+  position: absolute;
+  border-radius: 50% 0 50% 0;
+}
+.b-leaf-1 {
+  width: 440px;
+  height: 440px;
+  top: -160px;
+  left: -130px;
+  background: rgba(82, 121, 111, 0.14);
+  transform: rotate(28deg);
+}
+.b-leaf-2 {
+  width: 280px;
+  height: 280px;
+  bottom: -100px;
+  right: -80px;
+  background: rgba(116, 198, 157, 0.1);
+  transform: rotate(-18deg);
+}
+.b-leaf-3 {
+  width: 190px;
+  height: 190px;
+  top: 30px;
+  right: 13%;
+  background: rgba(82, 121, 111, 0.09);
+  transform: rotate(55deg);
+}
+.b-leaf-4 {
+  width: 150px;
+  height: 150px;
+  bottom: 20px;
+  left: 20%;
+  background: rgba(116, 198, 157, 0.08);
+  transform: rotate(-42deg);
+}
+.b-leaf-5 {
+  width: 220px;
+  height: 90px;
+  top: 42%;
+  left: -60px;
+  background: rgba(82, 121, 111, 0.09);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(22deg);
 }
 
 /* ===== HERO TEXT (below platformer) ===== */
@@ -191,7 +254,7 @@ nav {
 }
 
 .hero-text h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: clamp(2.4rem, 6vw, 5rem);
   color: white;
@@ -200,13 +263,13 @@ nav {
 }
 
 .hero-text h1 .highlight {
-  color: var(--yellow);
+  color: var(--gold);
   display: inline-block;
   animation: glow-pulse 2.5s ease-in-out infinite;
 }
 @keyframes glow-pulse {
-  0%, 100% { text-shadow: 0 0 20px rgba(255,217,61,0.3); }
-  50%       { text-shadow: 0 0 50px rgba(255,217,61,0.8), 0 0 90px rgba(255,217,61,0.25); }
+  0%, 100% { text-shadow: 0 0 20px rgba(200,169,110,0.35); }
+  50%       { text-shadow: 0 0 50px rgba(200,169,110,0.85), 0 0 90px rgba(200,169,110,0.3); }
 }
 
 .hero-text p {
@@ -230,7 +293,7 @@ nav {
   display: inline-block;
   padding: 0.85rem 2.1rem;
   border-radius: 50px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 1px;
@@ -273,7 +336,7 @@ nav {
 section { padding: 5rem 2rem; }
 
 .section-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: clamp(2rem, 5vw, 3.2rem);
   text-align: center;
@@ -324,7 +387,7 @@ section { padding: 5rem 2rem; }
   justify-content: center;
 }
 .featured-card h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 0.8rem;
@@ -336,18 +399,18 @@ section { padding: 5rem 2rem; }
   line-height: 1.65;
 }
 .featured-card.books {
-  border-color: var(--purple);
-  box-shadow: 7px 7px 0 var(--purple);
+  border-color: var(--sage);
+  box-shadow: 7px 7px 0 var(--sage);
 }
-.featured-card.books:hover { box-shadow: 11px 11px 0 var(--purple); }
-.featured-card.books .featured-card-icon { background: #f0e0ff; }
+.featured-card.books:hover { box-shadow: 11px 11px 0 var(--sage); }
+.featured-card.books .featured-card-icon { background: #ddeade; }
 
 .featured-card.games {
-  border-color: var(--green);
-  box-shadow: 7px 7px 0 var(--green);
+  border-color: var(--terracotta);
+  box-shadow: 7px 7px 0 var(--terracotta);
 }
-.featured-card.games:hover { box-shadow: 11px 11px 0 var(--green); }
-.featured-card.games .featured-card-icon { background: #e0f8e8; }
+.featured-card.games:hover { box-shadow: 11px 11px 0 var(--terracotta); }
+.featured-card.games .featured-card-icon { background: #f5ede8; }
 
 /* ===== QUOTE SECTION ===== */
 .fun-section {
@@ -355,10 +418,10 @@ section { padding: 5rem 2rem; }
   color: white;
   text-align: center;
 }
-.fun-section .section-title { color: var(--yellow); }
+.fun-section .section-title { color: var(--gold); }
 
 .quote-display {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: clamp(1.3rem, 3vw, 1.9rem);
   color: white;
@@ -381,7 +444,7 @@ section { padding: 5rem 2rem; }
   overflow: hidden;
 }
 .page-hero h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: clamp(2.8rem, 7vw, 5rem);
   color: white;
@@ -467,7 +530,7 @@ section { padding: 5rem 2rem; }
 }
 /* Pixel-art style letter covers */
 .book-placeholder span {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 5rem;
   color: rgba(255,255,255,0.6);
@@ -482,7 +545,7 @@ section { padding: 5rem 2rem; }
   right: 12px;
   background: var(--yellow);
   color: var(--navy);
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 0.7rem;
   padding: 4px 11px;
@@ -499,7 +562,7 @@ section { padding: 5rem 2rem; }
   flex: 1;
 }
 .book-genre {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 0.75rem;
   color: var(--card-accent, var(--purple));
   font-weight: 500;
@@ -508,7 +571,7 @@ section { padding: 5rem 2rem; }
   margin-bottom: 0.6rem;
 }
 .book-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.55rem;
   color: var(--navy);
@@ -638,7 +701,7 @@ section { padding: 5rem 2rem; }
   top: 24px;
   left: 0; right: 0;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.5rem;
   color: #FFB800;
@@ -691,7 +754,7 @@ section { padding: 5rem 2rem; }
   width: 30px; height: 24px;
   background: #3C3B6E;
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 6px;
   font-weight: 700;
   display: flex;
@@ -735,7 +798,7 @@ section { padding: 5rem 2rem; }
 .tag {
   background: var(--navy);
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -743,7 +806,7 @@ section { padding: 5rem 2rem; }
   border-radius: 20px;
 }
 .game-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.6rem;
   margin-bottom: 0.8rem;
@@ -778,7 +841,7 @@ section { padding: 5rem 2rem; }
   gap: 0.8rem;
 }
 .coming-soon-card h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.5rem;
   color: #ccc;
@@ -820,7 +883,7 @@ section { padding: 5rem 2rem; }
   100% { transform: scale(1) rotate(0); }
 }
 .easter-modal h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.9rem;
   color: var(--yellow);
@@ -841,7 +904,7 @@ section { padding: 5rem 2rem; }
   border: none;
   padding: 0.8rem 2.2rem;
   border-radius: 50px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 1px;
@@ -874,12 +937,12 @@ section { padding: 5rem 2rem; }
   color: white;
   padding: 0.9rem 2rem;
   border-radius: 50px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 1rem;
   z-index: 8000;
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--gold);
   transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
   white-space: nowrap;
   pointer-events: none;
@@ -892,13 +955,13 @@ footer {
   color: rgba(255,255,255,0.65);
   text-align: center;
   padding: 2.5rem 2rem;
-  border-top: 4px solid var(--coral);
+  border-top: 4px solid var(--terracotta);
 }
 footer .footer-logo {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.6rem;
-  color: var(--yellow);
+  color: var(--gold);
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
 }
@@ -908,7 +971,7 @@ footer a {
   text-decoration: none;
   transition: color 0.2s;
 }
-footer a:hover { color: var(--yellow); }
+footer a:hover { color: var(--gold); }
 
 .secret-link {
   font-size: 0.9rem;
@@ -916,7 +979,7 @@ footer a:hover { color: var(--yellow); }
   transition: transform 0.2s, color 0.2s;
   display: inline-block;
   color: rgba(255,255,255,0.15);
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -961,8 +1024,8 @@ footer a:hover { color: var(--yellow); }
     background: var(--navy);
     flex-direction: column;
     padding: 1rem 1.5rem;
-    border-top: 2px solid var(--coral);
-    border-bottom: 2px solid var(--coral);
+    border-top: 2px solid var(--terracotta);
+    border-bottom: 2px solid var(--terracotta);
     gap: 0.3rem;
   }
   .nav-links.open { display: flex; }
