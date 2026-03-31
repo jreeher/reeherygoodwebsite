@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan Reeher — Books &amp; Projects</title>
+  <meta name="description" content="Children's books and games made by Jordan Reeher. Snails, dinos, cowboys, pillows, and the American Dream.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2314213D'/><text y='.85em' font-size='55' font-family='sans-serif' font-weight='bold' fill='%23FFD93D' x='8'>JR</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="index.html" class="nav-logo" id="nav-logo" title="Try clicking me a bunch">JR</a>
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== SITE HERO ===== -->
+  <section class="site-hero">
+    <div class="site-hero-inner">
+      <h1 class="site-hero-title">
+        <span class="hero-line-1">Reehery</span>
+        <span class="hero-line-2">Good Ideas</span>
+      </h1>
+      <div class="site-hero-rule"></div>
+    </div>
+  </section>
+
+  <!-- ===== HERO TEXT ===== -->
+  <section class="hero-text">
+    <h1>Things Made By <span class="highlight">Jordan Reeher</span></h1>
+    <p>
+      Children's books about snails, dinos, cowboys, pillows, and lions.<br>
+      Plus a video game about the American Dream. And counting.
+    </p>
+    <div class="hero-cta">
+      <a href="books.html" class="btn btn-coral">See the Books</a>
+      <a href="projects.html" class="btn btn-yellow">See the Projects</a>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S HERE ===== -->
+  <section style="background: var(--cream);">
+    <div class="container">
+      <h2 class="section-title">What's Here</h2>
+      <p class="section-subtitle">Two types of things. Both extremely fun. Zero boring parts.</p>
+
+      <div class="featured-grid">
+        <a href="books.html" class="featured-card books fade-up">
+          <div class="featured-card-icon">
+            <!-- Book icon (CSS/SVG) -->
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="4" width="22" height="30" rx="3" fill="#C77DFF" opacity="0.8"/>
+              <rect x="10" y="4" width="18" height="30" rx="3" fill="#9B5DE5"/>
+              <rect x="12" y="10" width="12" height="2" rx="1" fill="white" opacity="0.7"/>
+              <rect x="12" y="15" width="10" height="2" rx="1" fill="white" opacity="0.5"/>
+              <rect x="12" y="20" width="11" height="2" rx="1" fill="white" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>The Books</h3>
+          <p>Five children's picture books about a self-conscious snail, a toy-loving dinosaur, a coconut cowboy, the fluffiest adventure ever told, and a lion learning to roar. Ages 0–7.</p>
+        </a>
+        <a href="projects.html" class="featured-card games fade-up">
+          <div class="featured-card-icon">
+            <!-- Controller icon (CSS/SVG) -->
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="14" width="32" height="16" rx="8" fill="#6BCB77" opacity="0.8"/>
+              <rect x="6" y="16" width="28" height="12" rx="6" fill="#2D7A40"/>
+              <rect x="11" y="18" width="3" height="8" rx="1.5" fill="white" opacity="0.7"/>
+              <rect x="9" y="20" width="7" height="3" rx="1.5" fill="white" opacity="0.7"/>
+              <circle cx="27" cy="20" r="2" fill="white" opacity="0.7"/>
+              <circle cx="31" cy="22" r="2" fill="white" opacity="0.5"/>
+              <circle cx="27" cy="24" r="2" fill="white" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3>The Projects</h3>
+          <p>The American Dream — a browser game about money, choices, and surviving the grind. Pick your starting class, dodge disasters, and chase the good life. Play free in your browser.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAKE IT RAIN ===== -->
+  <section style="background: #f0e6ff; text-align: center; padding: 3rem 2rem;">
+    <h2 class="section-title" style="margin-bottom: 0.8rem;">Feeling Festive?</h2>
+    <p class="section-subtitle">This button does exactly what it sounds like.</p>
+    <button class="btn btn-purple" id="bookRainBtn">Make It Rain</button>
+  </section>
+
+  <!-- ===== QUOTE MACHINE ===== -->
+  <section class="fun-section">
+    <div class="container">
+      <h2 class="section-title">Words of Wisdom</h2>
+      <p style="text-align:center; color: rgba(255,255,255,0.4); font-weight:600; margin-bottom:2rem; font-size:0.9rem; letter-spacing: 1px;">
+        STRAIGHT FROM THE PAGES (PROBABLY)
+      </p>
+      <div class="quote-display" id="quoteDisplay">...</div>
+      <div style="text-align: center;">
+        <button class="btn btn-coral" id="quoteBtn">Another One</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Jordan Reeher</div>
+    <p>Made with creativity, chaos, and questionable amounts of coffee.</p>
+    <p style="margin-top: 0.6rem;">
+      <a href="books.html">Books</a> &nbsp;&middot;&nbsp;
+      <a href="projects.html">Projects</a>
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.8rem;">
+      &copy; 2025 Jordan Reeher &nbsp;&middot;&nbsp;
+      <span class="secret-link" id="footerSecret" title="">&#10022;</span>
+    </p>
+  </footer>
+
+  <!-- ===== EASTER EGG OVERLAY ===== -->
+  <div id="easter-overlay">
+    <div class="easter-modal">
+      <h2 id="easter-title">SECRET UNLOCKED!</h2>
+      <p id="easter-msg">You found something!</p>
+      <button class="close-btn" onclick="closeEaster()">Awesome, thanks!</button>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Jordan Reeher</title>
+  <meta name="description" content="Projects by Jordan Reeher. Play The American Dream — a browser game about money, choices, and chasing the good life.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230D3B00'/><text y='.85em' font-size='55' font-family='sans-serif' font-weight='bold' fill='%236BCB77' x='8'>JR</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="index.html" class="nav-logo" id="nav-logo">JR</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <div class="page-hero projects-hero">
+    <h1>The Projects</h1>
+    <p>Games, experiments, and other things that exist because they had to.</p>
+  </div>
+
+  <!-- ===== PROJECTS GRID ===== -->
+  <div class="projects-grid">
+
+    <!-- ── The American Dream ── -->
+    <div class="game-card fade-up">
+      <div class="game-preview american-dream">
+        <div class="city-skyline"></div>
+        <div class="flag-css"></div>
+      </div>
+      <div class="game-body">
+        <div class="game-tags">
+          <span class="tag">Browser Game</span>
+          <span class="tag">Free to Play</span>
+          <span class="tag">Strategy</span>
+        </div>
+        <h2 class="game-title">The American Dream</h2>
+        <p class="game-desc">
+          Choose your starting class &mdash; Born Into Poverty, Middle Class, or Trust Fund Baby &mdash;
+          and try to survive 12 months of rent, groceries, medical bills, and bad luck.
+          Balance your money, health, and stress as random life events throw curveballs at you.
+          Can you afford the car? The house? The yacht?
+          <br><br>
+          <em>One bad month can send you back to zero.</em>
+        </p>
+        <a href="https://jreeher.github.io/american-dream/"
+           class="btn btn-blue" target="_blank" rel="noopener noreferrer">
+          Play Now
+        </a>
+      </div>
+    </div>
+
+    <!-- ── Screen Tax ── -->
+    <div class="game-card fade-up">
+      <div class="game-preview screen-tax">
+        <div class="screen-tax-label">$6.40</div>
+        <div class="screen-tax-bars">
+          <span style="height:40px"></span>
+          <span style="height:65px"></span>
+          <span style="height:30px"></span>
+          <span style="height:90px"></span>
+          <span style="height:55px"></span>
+        </div>
+      </div>
+      <div class="game-body">
+        <div class="game-tags">
+          <span class="tag">Browser Extension</span>
+          <span class="tag">Productivity</span>
+          <span class="tag">Free</span>
+        </div>
+        <h2 class="game-title">Screen Tax</h2>
+        <p class="game-desc">
+          What if your browser charged you real money every time you spent too long on distracting sites?
+          Screen Tax does exactly that. Set a weekly spending cap, define which sites cost you,
+          and watch your dashboard fill up with very real, very sobering data about where your time goes.
+          <br><br>
+          <em>Your attention is worth something. Start acting like it.</em>
+        </p>
+        <a href="https://timesuck-backend-production.up.railway.app/app/dashboard.html"
+           class="btn btn-yellow" target="_blank" rel="noopener noreferrer">
+          Check It Out
+        </a>
+      </div>
+    </div>
+
+    <!-- ── Coming Soon ── -->
+    <div class="coming-soon-card fade-up">
+      <h3>More Coming...</h3>
+      <p>Something else is being cooked up in the creative lab. Maybe a sequel. Maybe something completely different. Check back later.</p>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Jordan Reeher</div>
+    <p>Games are just stories you get to control.</p>
+    <p style="margin-top: 0.6rem;">
+      <a href="index.html">Home</a> &nbsp;&middot;&nbsp;
+      <a href="books.html">Books</a>
+    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.8rem;">&copy; 2025 Jordan Reeher</p>
+  </footer>
+
+  <!-- ===== EASTER EGG OVERLAY ===== -->
+  <div id="easter-overlay">
+    <div class="easter-modal">
+      <h2 id="easter-title">SECRET!</h2>
+      <p id="easter-msg">You found something!</p>
+      <button class="close-btn" onclick="closeEaster()">Awesome!</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
