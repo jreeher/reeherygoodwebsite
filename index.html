@@ -6,13 +6,13 @@
   <title>Jordan Reeher — Books &amp; Projects</title>
   <meta name="description" content="Children's books and games made by Jordan Reeher. Snails, dinos, cowboys, pillows, and the American Dream.">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2314213D'/><text y='.85em' font-size='55' font-family='sans-serif' font-weight='bold' fill='%23FFD93D' x='8'>JR</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23354F3A'/><path d='M50 82 Q25 62 22 37 Q26 34 30 37 Q40 60 50 82Z' fill='%235B8C65'/><path d='M50 82 Q75 62 78 37 Q74 34 70 37 Q60 60 50 82Z' fill='%235B8C65'/><path d='M50 82 Q33 57 35 27 Q39 24 43 28 Q46 57 50 82Z' fill='%2374A67F'/><path d='M50 82 Q67 57 65 27 Q61 24 57 28 Q54 57 50 82Z' fill='%2374A67F'/><path d='M50 82 Q44 52 47 17 Q50 14 53 17 Q56 52 50 82Z' fill='%2390C49B'/></svg>">
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
   <nav>
-    <a href="index.html" class="nav-logo" id="nav-logo" title="Try clicking me a bunch">JR</a>
+    <a href="index.html" class="nav-logo">JR</a>
     <div class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </div>
@@ -95,27 +95,6 @@
     </div>
   </section>
 
-  <!-- ===== MAKE IT RAIN ===== -->
-  <section style="background: var(--mist); text-align: center; padding: 3rem 2rem;">
-    <h2 class="section-title" style="margin-bottom: 0.8rem;">Feeling Festive?</h2>
-    <p class="section-subtitle">This button does exactly what it sounds like.</p>
-    <button class="btn btn-purple" id="bookRainBtn">Make It Rain</button>
-  </section>
-
-  <!-- ===== QUOTE MACHINE ===== -->
-  <section class="fun-section">
-    <div class="container">
-      <h2 class="section-title">Words of Wisdom</h2>
-      <p style="text-align:center; color: rgba(255,255,255,0.4); font-weight:600; margin-bottom:2rem; font-size:0.9rem; letter-spacing: 1px;">
-        STRAIGHT FROM THE PAGES (PROBABLY)
-      </p>
-      <div class="quote-display" id="quoteDisplay">...</div>
-      <div style="text-align: center;">
-        <button class="btn btn-coral" id="quoteBtn">Another One</button>
-      </div>
-    </div>
-  </section>
-
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-logo">Jordan Reeher</div>
@@ -124,23 +103,8 @@
       <a href="books.html">Books</a> &nbsp;&middot;&nbsp;
       <a href="projects.html">Projects</a>
     </p>
-    <p style="margin-top: 0.8rem; font-size: 0.8rem;">
-      &copy; 2025 Jordan Reeher &nbsp;&middot;&nbsp;
-      <span class="secret-link" id="footerSecret" title="">&#10022;</span>
-    </p>
+    <p style="margin-top: 0.8rem; font-size: 0.8rem;">&copy; 2025 Jordan Reeher</p>
   </footer>
-
-  <!-- ===== EASTER EGG OVERLAY ===== -->
-  <div id="easter-overlay">
-    <div class="easter-modal">
-      <h2 id="easter-title">SECRET UNLOCKED!</h2>
-      <p id="easter-msg">You found something!</p>
-      <button class="close-btn" onclick="closeEaster()">Awesome, thanks!</button>
-    </div>
-  </div>
-
-  <!-- Toast notification -->
-  <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
 </body>

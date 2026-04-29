@@ -677,6 +677,15 @@ section { padding: 5rem 2rem; }
 .game-preview.american-dream {
   background: linear-gradient(160deg, #87CEEB 0%, #4a90d9 50%, #1a3b6e 100%);
 }
+.game-preview.simmer-down {
+  background: linear-gradient(160deg, #FAFAF7 0%, #EDEBE7 100%);
+}
+.simmer-down-icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 28px;
+  box-shadow: 0 8px 24px rgba(196,101,74,0.25);
+}
 .game-preview.screen-tax {
   background: linear-gradient(160deg, #1a1a2e 0%, #0d0d1a 100%);
   position: relative;
